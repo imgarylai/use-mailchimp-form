@@ -1,3 +1,0 @@
-const useMailchimpForm = () => {};
-
-export { useMailchimpForm };

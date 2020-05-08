@@ -1,6 +1,6 @@
 {
   "name": "use-mailchimp-form",
-  "description": "use mailchimp form",
+  "description": "MailChimp Form implemented in React Hooks",
   "keywords": [
     "mailchimp",
     "react",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/imgarylai/use-mailchimp-form#readme",
   "version": "0.0.0-development",
-  "source": "src/index.ts",
+  "source": "src/index.js",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
@@ -52,5 +52,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "jsonp": "^0.2.1",
+    "query-string": "^6.12.1"
   }
 }
