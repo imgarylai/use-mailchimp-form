@@ -1,0 +1,56 @@
+{
+  "name": "use-mailchimp-form",
+  "description": "use mailchimp form",
+  "keywords": [
+    "mailchimp",
+    "react",
+    "hooks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imgarylai/use-mailchimp-form.git"
+  },
+  "author": "Gary Lai <garylai1990@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imgarylai/use-mailchimp-form/issues"
+  },
+  "homepage": "https://github.com/imgarylai/use-mailchimp-form#readme",
+  "version": "0.0.0-development",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/prompt": "^8.3.5",
+    "@types/react": "^16.9.0",
+    "commitizen": "^4.0.5",
+    "cz-conventional-changelog": "^3.1.0",
+    "husky": "^4.2.5",
+    "microbundle": "^0.11.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.0",
+    "semantic-release": "^17.0.7"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
