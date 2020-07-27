@@ -2,7 +2,7 @@ import { useState } from "react";
 import jsonp from "jsonp";
 import queryString from "query-string";
 
-export const useMailChimpForm = (url) => {
+export const useMailChimpForm = (url: string) => {
   const initStatusState = {
     loading: false,
     error: false,
@@ -11,29 +11,36 @@ export const useMailChimpForm = (url) => {
   const [status, setStatus] = useState(initStatusState);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (event, params) => {
-    event.preventDefault();
+  const handleSubmit = (params: { [key: string]: any }): void => {
     const query = queryString.stringify(params);
     const endpoint = url.replace("/post?", "/post-json?") + "&" + query;
     setStatus({ ...status, loading: true });
-    setMessage("sending");
     jsonp(endpoint, { param: "c" }, (error, data) => {
       if (error) {
         setStatus({ ...initStatusState, error: true });
-        setMessage(error);
-      } else if (data.result !== "success") {
-        setStatus({ ...initStatusState, error: true });
-        setMessage(data.msg);
+        setMessage(error.message);
       } else {
-        setStatus({ ...initStatusState, success: true });
+        if (data.result !== "success") {
+          setStatus({ ...initStatusState, error: true });
+        } else {
+          setStatus({ ...initStatusState, success: true });
+        }
         setMessage(data.msg);
       }
     });
   };
 
-  const resetStatus = () => {
+  const reset: () => void = () => {
     setStatus(initStatusState);
+    setMessage("");
   };
 
-  return { status, message, handleSubmit, resetStatus };
+  return {
+    loading: status.loading,
+    success: status.success,
+    error: status.error,
+    message,
+    handleSubmit,
+    reset,
+  };
 };
