@@ -2,7 +2,17 @@ import { useState } from "react";
 import jsonp from "jsonp";
 import queryString from "query-string";
 
-export const useMailChimpForm = (url: string) => {
+export const useMailChimpForm: (
+  url: string
+) => {
+  // eslint-disable-next-line
+  handleSubmit: (params: { [p: string]: any }) => void;
+  success: boolean;
+  reset: () => void;
+  loading: boolean;
+  error: boolean;
+  message: string;
+} = (url: string) => {
   const initStatusState = {
     loading: false,
     error: false,
@@ -11,6 +21,7 @@ export const useMailChimpForm = (url: string) => {
   const [status, setStatus] = useState(initStatusState);
   const [message, setMessage] = useState("");
 
+  // eslint-disable-next-line
   const handleSubmit = (params: { [key: string]: any }): void => {
     const query = queryString.stringify(params);
     const endpoint = url.replace("/post?", "/post-json?") + "&" + query;
