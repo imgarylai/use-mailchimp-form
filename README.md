@@ -34,28 +34,36 @@ export default function App() {
   const url = "YOUR_SUBSCRIBE_URL";
   // The url looks like the url below:
   // https://aaaaaaaaa.us20.list-manage.com/subscribe/post?u=xxxxxxxxxxxxxxxxxx&amp;id=yyyyyyyyyy
-  const { status, message, handleSubmit } = useMailChimpForm(url);
+  const {
+      loading,
+      error,
+      success,
+      message,
+      handleSubmit
+    } = useMailChimpForm(url);
   const [params, handleFieldChange] = useFormFields({
     EMAIL: ""
   });
   return (
     <div>
-      <form onSubmit={event => {
-          event.preventdefault()
-          handleSubmit(params)
-        }}>
+      <form
+        onSubmit={event => {
+          event.preventDefault();
+          handleSubmit(fields);
+        }}
+      >
         <input
           id="EMAIL"
           autoFocus
           type="email"
-          value={params.EMAIL}
+          value={fields.EMAIL}
           onChange={handleFieldChange}
         />
         <button>submit</button>
       </form>
-      {status.loading && message}
-      {status.error && message}
-      {status.success && message}
+      {loading && "submitting"}
+      {error && message}
+      {success && message}
     </div>
   );
 }
