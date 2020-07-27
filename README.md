@@ -5,6 +5,10 @@
 ```bash
 $ npm install use-mailchimp-form
 ```
+or
+```base
+$ yarn add use-mailchimp-form
+```
 
 This package helps you integrate the [MailChimp](https://mailchimp.com/) subscribe form into your React web page.
 It is implemented in the React hooks way to handle the business logic. Your only responsibility is to create the view. 😀 And the view can be fully customized.      
