@@ -1,5 +1,8 @@
 # use-mailchimp-form [![npm](https://img.shields.io/npm/v/use-mailchimp-form)](https://www.npmjs.com/package/use-mailchimp-form) [![Build Status](https://travis-ci.com/imgarylai/use-mailchimp-form.svg?branch=master)](https://travis-ci.com/imgarylai/use-mailchimp-form) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
+This package helps you integrate the [MailChimp](https://mailchimp.com/) subscribe form into your React App.
+It is implemented in the React hooks way to handle the business logic. You can just make your efforts for the view. 😀 The view component can be fully customized or implemented with other React form library.      
+
 ## Install
 
 ```bash
@@ -10,28 +13,22 @@ or
 $ yarn add use-mailchimp-form
 ```
 
-This package helps you integrate the [MailChimp](https://mailchimp.com/) subscribe form into your React web page.
-It is implemented in the React hooks way to handle the business logic. Your only responsibility is to create the view. 😀 And the view can be fully customized.      
+## Mailchimp
+
+To get your mailchimp form post endpoint.
+
+1. Go to the `audience` Page. In the right-hand side, click the dropdown menu, `Manage Audience > Signup Form`.
+2. Select `Embedded Form`. 
+3. Inside integration the code, find the form post action url, which is like: `https://aaaaaaaaa.us20.list-manage.com/subscribe/post?u=xxxxxxxxxxxxxxxxxx&amp;id=yyyyyyyyyy`  
+
+We need this url later. 
   
 ## Usage
 
 ```jsx
-import { useState } from "react";
-import { useMailChimpForm } from "use-mailchimp-form";
+import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
 
-const useFormFields = initialState => {
-  const [fields, setValues] = useState(initialState);
-
-  return [
-    fields,
-    function(event) {
-      setValues({
-        ...fields,
-        [event.target.id]: event.target.value
-      });
-    }
-  ];
-};
+// The useFormFields is not necessary. You can use your own form component.  
 
 export default function App() {
   const url = "YOUR_SUBSCRIBE_URL";
@@ -43,7 +40,10 @@ export default function App() {
   });
   return (
     <div>
-      <form onSubmit={event => handleSubmit(event, params)}>
+      <form onSubmit={event => {
+          event.preventdefault()
+          handleSubmit(params)
+        }}>
         <input
           id="EMAIL"
           autoFocus
