@@ -1,6 +1,17 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import jsonp from "jsonp";
 import queryString from "query-string";
+
+export const useFormFields = (initialState: { [key: string]: any }) => {
+  const [fields, setValues] = useState(initialState);
+  const handleFieldChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValues({
+      ...fields,
+      [event.target.id]: event.target.value,
+    });
+  };
+  return { fields, handleFieldChange };
+};
 
 export const useMailChimpForm: (
   url: string
@@ -26,6 +37,7 @@ export const useMailChimpForm: (
     const query = queryString.stringify(params);
     const endpoint = url.replace("/post?", "/post-json?") + "&" + query;
     setStatus({ ...status, loading: true });
+    setMessage("");
     jsonp(endpoint, { param: "c" }, (error, data) => {
       if (error) {
         setStatus({ ...initStatusState, error: true });
@@ -41,9 +53,9 @@ export const useMailChimpForm: (
     });
   };
 
-  const reset: () => void = () => {
-    setStatus(initStatusState);
-    setMessage("");
+  const reset: () => void = async () => {
+    await setMessage("");
+    await setStatus(initStatusState);
   };
 
   return {
