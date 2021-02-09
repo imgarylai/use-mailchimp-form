@@ -45,7 +45,7 @@
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-react": "7.20.4",
     "eslint-plugin-react-hooks": "4.0.8",
-    "husky": "4.2.5",
+    "husky": "5.0.9",
     "microbundle": "0.12.3",
     "prettier": "2.0.5",
     "react": "16.13.1",
