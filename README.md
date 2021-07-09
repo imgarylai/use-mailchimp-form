@@ -41,7 +41,7 @@ export default function App() {
       message,
       handleSubmit
     } = useMailChimpForm(url);
-  const [params, handleFieldChange] = useFormFields({
+  const [fields, handleFieldChange] = useFormFields({
     EMAIL: ""
   });
   return (
