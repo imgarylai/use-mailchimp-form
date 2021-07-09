@@ -32,6 +32,10 @@
   "peerDependencies": {
     "react": ">= 16.8.0"
   },
+  "dependencies": {
+    "jsonp": "^0.2.1",
+    "query-string": "^6.13.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
@@ -60,9 +64,14 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {
-    "jsonp": "^0.2.1",
-    "query-string": "^6.13.1"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-max-line-length": [1, "always", 100],
+      "footer-max-line-length": [1, "always", 100]
+    }
   },
   "release": {
     "branches": [
