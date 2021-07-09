@@ -44,11 +44,11 @@
     "eslint": "7.30.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-react": "7.24.0",
-    "eslint-plugin-react-hooks": "4.0.8",
+    "eslint-plugin-react-hooks": "4.2.0",
     "husky": "4.3.8",
     "microbundle": "0.12.3",
     "prettier": "2.3.1",
-    "react": "16.13.1",
+    "react": "16.14.0",
     "semantic-release": "17.2.3",
     "typescript": "3.9.9"
   },
