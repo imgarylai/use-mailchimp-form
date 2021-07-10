@@ -24,10 +24,11 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch",
     "commit": "git-cz",
-    "semantic-release": "semantic-release",
-    "prepare": "husky install"
+    "dev": "microbundle watch",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": ">= 16.8.0"
@@ -62,6 +63,25 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "prettier"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
     }
   },
   "commitlint": {

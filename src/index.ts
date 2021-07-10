@@ -1,8 +1,11 @@
-import { ChangeEvent, useState } from "react";
 import jsonp from "jsonp";
 import queryString from "query-string";
+import { ChangeEvent, useState } from "react";
 
-export const useFormFields = (initialState: { [key: string]: any }) => {
+export const useFormFields: (initialState: { [p: string]: any }) => {
+  handleFieldChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  fields: { [p: string]: any };
+} = (initialState: { [key: string]: any }) => {
   const [fields, setValues] = useState(initialState);
   const handleFieldChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValues({
@@ -13,11 +16,8 @@ export const useFormFields = (initialState: { [key: string]: any }) => {
   return { fields, handleFieldChange };
 };
 
-export const useMailChimpForm: (
-  url: string
-) => {
-  // eslint-disable-next-line
-  handleSubmit: (params: { [p: string]: any }) => void;
+export const useMailChimpForm: (url: string) => {
+  handleSubmit: (params: { [key: string]: any }) => void;
   success: boolean;
   reset: () => void;
   loading: boolean;
@@ -32,7 +32,6 @@ export const useMailChimpForm: (
   const [status, setStatus] = useState(initStatusState);
   const [message, setMessage] = useState("");
 
-  // eslint-disable-next-line
   const handleSubmit = (params: { [key: string]: any }): void => {
     const query = queryString.stringify(params);
     const endpoint = url.replace("/post?", "/post-json?") + "&" + query;
