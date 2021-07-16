@@ -52,9 +52,9 @@ export const useMailChimpForm: (url: string) => {
     });
   };
 
-  const reset: () => void = async () => {
-    await setMessage("");
-    await setStatus(initStatusState);
+  const reset: () => void = () => {
+    setMessage("");
+    setStatus(initStatusState);
   };
 
   return {
