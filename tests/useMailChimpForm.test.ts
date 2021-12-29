@@ -1,4 +1,4 @@
-import { renderHook, act } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import { useFormFields, useMailChimpForm } from "../src";
 
 test("should return initial mailchimp form state", () => {

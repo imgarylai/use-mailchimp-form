@@ -2,10 +2,14 @@ import jsonp from "jsonp";
 import queryString from "query-string";
 import { ChangeEvent, useState } from "react";
 
-export const useFormFields: (initialState: { [p: string]: any }) => {
+interface Params {
+  [key: string]: unknown;
+}
+
+export const useFormFields: (initialState: Params) => {
   handleFieldChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  fields: { [p: string]: any };
-} = (initialState: { [key: string]: any }) => {
+  fields: Params;
+} = (initialState: Params) => {
   const [fields, setValues] = useState(initialState);
   const handleFieldChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValues({
@@ -17,7 +21,7 @@ export const useFormFields: (initialState: { [p: string]: any }) => {
 };
 
 export const useMailChimpForm: (url: string) => {
-  handleSubmit: (params: { [key: string]: any }) => void;
+  handleSubmit: (params: Params) => void;
   success: boolean;
   reset: () => void;
   loading: boolean;
@@ -32,7 +36,7 @@ export const useMailChimpForm: (url: string) => {
   const [status, setStatus] = useState(initStatusState);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (params: { [key: string]: any }): void => {
+  const handleSubmit = (params: Params): void => {
     const query = queryString.stringify(params);
     const endpoint = url.replace("/post?", "/post-json?") + "&" + query;
     setStatus({ ...status, loading: true });
