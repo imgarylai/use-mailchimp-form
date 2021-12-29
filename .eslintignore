@@ -6,5 +6,7 @@ dist
 coverage
 # don't lint config files
 .eslintrc.js
+.commitlintrc.js
+.releaserc.js
 babel.config.js
 jest.config.js
