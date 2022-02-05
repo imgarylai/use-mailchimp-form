@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/imgarylai/use-mailchimp-form/compare/v2.0.4...v2.0.5) (2022-02-05)
+
+
+### Performance Improvements
+
+* **package:** update dependencies ([42ee97c](https://github.com/imgarylai/use-mailchimp-form/commit/42ee97c32c9c50e3d2aaf3522c4c859f05b63ea9))
+
 ## [2.0.4](https://github.com/imgarylai/use-mailchimp-form/compare/v2.0.3...v2.0.4) (2021-09-21)
 
 
