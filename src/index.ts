@@ -1,8 +1,9 @@
-import jsonp from "jsonp";
+import fetchJsonp from "fetch-jsonp";
 import queryString from "query-string";
 import { ChangeEvent, useState } from "react";
+import { getErrorMessage } from "./errors";
 
-interface Params {
+export interface Params {
   [key: string]: unknown;
 }
 
@@ -36,24 +37,26 @@ export const useMailChimpForm: (url: string) => {
   const [status, setStatus] = useState(initStatusState);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (params: Params): void => {
+  const handleSubmit = async (params: Params): Promise<void> => {
     const query = queryString.stringify(params);
     const endpoint = url.replace("/post?", "/post-json?") + "&" + query;
     setStatus({ ...status, loading: true });
     setMessage("");
-    jsonp(endpoint, { param: "c" }, (error, data) => {
-      if (error) {
+    try {
+      const response: fetchJsonp.Response = await fetchJsonp(endpoint, {
+        jsonpCallback: "c",
+      });
+      if (response.ok) {
         setStatus({ ...initStatusState, error: true });
-        setMessage(error.message);
       } else {
-        if (data.result !== "success") {
-          setStatus({ ...initStatusState, error: true });
-        } else {
-          setStatus({ ...initStatusState, success: true });
-        }
-        setMessage(data.msg);
+        setStatus({ ...initStatusState, success: true });
       }
-    });
+      const data = await response.json();
+      setMessage(data.msg);
+    } catch (error) {
+      setStatus({ ...initStatusState, error: true });
+      setMessage(getErrorMessage(error));
+    }
   };
 
   const reset: () => void = () => {
