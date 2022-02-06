@@ -12,7 +12,7 @@ export const toErrorWithMessage = (maybeError: unknown): ErrorWithMessage => {
   if (isErrorWithMessage(maybeError)) return maybeError;
 
   try {
-    return new Error(JSON.stringify(maybeError));
+    return new Error(JSON.parse(JSON.stringify(maybeError)));
   } catch {
     // fallback in case there's an error stringifying the maybeError
     // like with circular references for example.
