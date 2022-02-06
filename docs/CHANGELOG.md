@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/imgarylai/use-mailchimp-form/compare/v2.0.5...v3.0.0) (2022-02-06)
+
+
+### Code Refactoring
+
+* **package:** replace jsonp with fetch-jsonp ([50bc0b1](https://github.com/imgarylai/use-mailchimp-form/commit/50bc0b1d3476fcc5b330e7ba72ef40cd275dee94))
+
+
+### BREAKING CHANGES
+
+* **package:** jsonp dependency replacement
+
 ## [2.0.5](https://github.com/imgarylai/use-mailchimp-form/compare/v2.0.4...v2.0.5) (2022-02-05)
 
 
