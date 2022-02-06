@@ -29,7 +29,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "peerDependencies": {
     "react": ">= 16.8.0"
