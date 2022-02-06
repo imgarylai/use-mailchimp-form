@@ -1,4 +1,4 @@
-# use-mailchimp-form [![npm](https://img.shields.io/npm/v/use-mailchimp-form)](https://www.npmjs.com/package/use-mailchimp-form) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+# use-mailchimp-form [![npm](https://img.shields.io/npm/v/use-mailchimp-form)](https://www.npmjs.com/package/use-mailchimp-form) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![codecov](https://codecov.io/gh/imgarylai/use-mailchimp-form/branch/main/graph/badge.svg?token=HK9ISNOG26)](https://codecov.io/gh/imgarylai/use-mailchimp-form)
 
 This package helps you integrate the [MailChimp](https://mailchimp.com/) subscribe form into your React App.
 It is implemented in the React hooks way to handle the business logic. You can just make your efforts for the view. 😀 The view component can be fully customized or implemented with other React form library.      
