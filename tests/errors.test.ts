@@ -1,6 +1,6 @@
 import { getErrorMessage } from "../src/errors";
 
-describe("Handle error messages", () => {
+describe("Error messages", () => {
   test("should get error message from error object", () => {
     const error = new Error("Test error");
     expect(getErrorMessage(error)).toEqual(error.message);
@@ -16,7 +16,7 @@ describe("Handle error messages", () => {
     expect(getErrorMessage(errorString)).toEqual(errorString);
   });
 
-  test("should return error message from error string", () => {
+  test("should return error message if error message has cyclic object value", () => {
     const jsonMock = jest.spyOn(JSON, "stringify");
     jsonMock.mockImplementation(() => {
       throw new TypeError("cyclic object value");

@@ -46,10 +46,11 @@ export const useMailChimpForm: (url: string) => {
       const response: fetchJsonp.Response = await fetchJsonp(endpoint, {
         jsonpCallback: "c",
       });
+
       if (response.ok) {
-        setStatus({ ...initStatusState, error: true });
-      } else {
         setStatus({ ...initStatusState, success: true });
+      } else {
+        setStatus({ ...initStatusState, error: true });
       }
       const data = await response.json();
       setMessage(data.msg);
@@ -65,6 +66,7 @@ export const useMailChimpForm: (url: string) => {
   };
 
   return {
+    status: status,
     loading: status.loading,
     success: status.success,
     error: status.error,
