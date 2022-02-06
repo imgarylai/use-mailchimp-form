@@ -2,7 +2,7 @@ name: Code climate
 on:
   push:
     branches:
-      - master
+      - main
     tags:
       - '!*' # Do not execute on tags
     paths:
