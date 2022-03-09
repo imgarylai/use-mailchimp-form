@@ -1,26 +1,26 @@
 {
   "name": "use-mailchimp-form",
+  "version": "3.0.0",
   "description": "MailChimp Form implemented in React Hooks",
   "keywords": [
     "mailchimp",
     "react",
     "hooks"
   ],
+  "homepage": "https://github.com/imgarylai/use-mailchimp-form#readme",
+  "bugs": {
+    "url": "https://github.com/imgarylai/use-mailchimp-form/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imgarylai/use-mailchimp-form.git"
   },
-  "author": "Gary Lai <garylai1990@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/imgarylai/use-mailchimp-form/issues"
-  },
-  "homepage": "https://github.com/imgarylai/use-mailchimp-form#readme",
-  "version": "3.0.0",
-  "source": "src/index.ts",
+  "author": "Gary Lai <garylai1990@gmail.com>",
   "main": "dist/index.js",
-  "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
+  "module": "dist/index.module.js",
+  "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "microbundle",
@@ -31,8 +31,10 @@
     "semantic-release": "semantic-release",
     "test": "jest --coverage"
   },
-  "peerDependencies": {
-    "react": ">= 16.8.0"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "fetch-jsonp": "1.2.1",
@@ -70,9 +72,7 @@
     "semantic-release": "19.0.2",
     "typescript": "4.6.2"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "peerDependencies": {
+    "react": ">= 16.8.0"
   }
 }
