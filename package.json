@@ -51,7 +51,7 @@
     "@semantic-release/git": "10.0.1",
     "@testing-library/react": "13.2.0",
     "@testing-library/react-hooks": "7.0.2",
-    "@types/jest": "27.5.0",
+    "@types/jest": "27.5.1",
     "@types/jsonp": "0.2.1",
     "@types/react": "18.0.9",
     "@typescript-eslint/eslint-plugin": "5.23.0",
