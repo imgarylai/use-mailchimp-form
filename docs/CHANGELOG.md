@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/imgarylai/use-mailchimp-form/compare/v3.0.0...v3.0.1) (2022-05-24)
+
+
+### Bug Fixes
+
+* **package:** fix jest version issue ([2dc8cd8](https://github.com/imgarylai/use-mailchimp-form/commit/2dc8cd8925953f25c0aac116cfee7ba1bf99fa95))
+
 # [3.0.0](https://github.com/imgarylai/use-mailchimp-form/compare/v2.0.5...v3.0.0) (2022-02-06)
 
 
