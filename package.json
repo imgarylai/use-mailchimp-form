@@ -67,7 +67,7 @@
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "microbundle": "0.15.0",
-    "prettier": "2.7.0",
+    "prettier": "2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "semantic-release": "19.0.3",
