@@ -1,6 +1,6 @@
 {
   "name": "use-mailchimp-form",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "MailChimp Form implemented in React Hooks",
   "keywords": [
     "mailchimp",
