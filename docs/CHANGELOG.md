@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/imgarylai/use-mailchimp-form/compare/v3.0.2...v3.0.3) (2022-09-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fetch-jsonp to v1.2.3 ([1f072ff](https://github.com/imgarylai/use-mailchimp-form/commit/1f072ff480a05386f99b4d0270efbcdd38343c48))
+
 ## [3.0.2](https://github.com/imgarylai/use-mailchimp-form/compare/v3.0.1...v3.0.2) (2022-07-21)
 
 
