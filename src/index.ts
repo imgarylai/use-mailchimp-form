@@ -7,6 +7,11 @@ export interface Params {
   [key: string]: unknown;
 }
 
+interface Response {
+  result: string;
+  msg: string;
+}
+
 export const useFormFields: (initialState: Params) => {
   handleFieldChange: (event: ChangeEvent<HTMLInputElement>) => void;
   fields: Params;
@@ -47,12 +52,16 @@ export const useMailChimpForm: (url: string) => {
         jsonpCallback: "c",
       });
 
-      if (response.ok) {
-        setStatus({ ...initStatusState, success: true });
-      } else {
-        setStatus({ ...initStatusState, error: true });
-      }
-      const data = await response.json();
+      const data: Response = await response.json<Response>();
+
+      const error = !response.ok || data.result === "error";
+
+      setStatus({
+        ...initStatusState,
+        success: !error,
+        error
+      });
+
       setMessage(data.msg);
     } catch (error) {
       setStatus({ ...initStatusState, error: true });
