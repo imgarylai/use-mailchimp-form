@@ -61,7 +61,7 @@
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.27.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-react": "7.31.10",
+    "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.2",
     "jest": "28.1.3",
