@@ -1,3 +1,10 @@
+## [3.0.5](https://github.com/imgarylai/use-mailchimp-form/compare/v3.0.4...v3.0.5) (2022-12-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency query-string to v7.1.2 ([d58a32a](https://github.com/imgarylai/use-mailchimp-form/commit/d58a32aec396096a271ea56ae0b8b80937de089c))
+
 ## [3.0.4](https://github.com/imgarylai/use-mailchimp-form/compare/v3.0.3...v3.0.4) (2022-11-28)
 
 
