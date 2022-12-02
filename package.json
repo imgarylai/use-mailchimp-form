@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "fetch-jsonp": "1.2.3",
-    "query-string": "7.1.2"
+    "query-string": "7.1.3"
   },
   "devDependencies": {
     "@babel/core": "7.20.5",
