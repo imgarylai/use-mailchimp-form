@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/imgarylai/use-mailchimp-form/compare/v3.0.6...v3.1.0) (2023-01-06)
+
+
+### Features
+
+* **nodejs:** last version for supporting v12 nodejs ([313b8f2](https://github.com/imgarylai/use-mailchimp-form/commit/313b8f226641cfbcb976726010605adcb86e03fd))
+
 ## [3.0.6](https://github.com/imgarylai/use-mailchimp-form/compare/v3.0.5...v3.0.6) (2022-12-02)
 
 
