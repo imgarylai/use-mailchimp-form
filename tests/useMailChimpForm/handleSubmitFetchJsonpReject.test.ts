@@ -4,12 +4,12 @@ import { useMailChimpForm } from "../../src";
 import { TEST_EMAIL, TEST_MAILCHIMP_URL, TEST_MESSAGE } from "../const";
 
 jest.mock("fetch-jsonp", () =>
-  jest.fn().mockImplementation(() => {
-    throw new Error("TESTING Message");
-  }),
+  jest
+    .fn()
+    .mockImplementation(() => Promise.reject(new Error("TESTING Message"))),
 );
 
-describe("handleSubmit fetchJsonp throws exception", () => {
+describe("handleSubmit fetchJsonp reject", () => {
   beforeEach(() => {
     jest.resetModules();
   });
