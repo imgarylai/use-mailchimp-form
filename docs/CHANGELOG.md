@@ -1,3 +1,9 @@
+## [3.1.2](https://github.com/imgarylai/use-mailchimp-form/compare/v3.1.1...v3.1.2) (2025-04-13)
+
+### Bug Fixes
+
+- drop windows support ([68cf1dc](https://github.com/imgarylai/use-mailchimp-form/commit/68cf1dc8fc5b54d627bae68f5d0ab8f517583569))
+
 ## [3.1.1](https://github.com/imgarylai/use-mailchimp-form/compare/v3.1.0...v3.1.1) (2025-04-13)
 
 ### Bug Fixes
