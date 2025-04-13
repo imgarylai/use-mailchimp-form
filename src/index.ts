@@ -12,12 +12,14 @@ interface Response {
   msg: string;
 }
 
-export const useFormFields: <T extends Params>(initialState: T) => {
+export const useFormFields: <T extends Params>(
+  initialState: T
+) => {
   handleFieldChange: (event: ChangeEvent<HTMLInputElement>) => void;
   fields: T;
 } = <T extends Params>(initialState: T) => {
   const [fields, setValues] = useState<T>(initialState);
-  const handleFieldChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleFieldChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setValues({
       ...fields,
       [event.target.id]: event.target.value,
@@ -59,7 +61,7 @@ export const useMailChimpForm: (url: string) => {
       setStatus({
         ...initStatusState,
         success: !error,
-        error
+        error,
       });
 
       setMessage(data.msg);
