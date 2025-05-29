@@ -34,5 +34,7 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: 3db0118f3fe61d4823663e7d09be1a1df46a35de00e702580b6057b59a960dc8
         with:
-          coverageCommand: npm run test
+          coverageCommand: npm run test:coverage
+          coverageLocations: |
+            ${{github.workspace}}/coverage/lcov.info:lcov
           debug: true
