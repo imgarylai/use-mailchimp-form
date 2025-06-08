@@ -29,7 +29,7 @@
     "build": "tsup",
     "clean": "rimraf dist coverage",
     "dev": "tsup --watch",
-    "predocs": "rimraf docs",
+    "predocs": "rimraf api-docs",
     "docs": "typedoc",
     "docs:watch": "typedoc --watch",
     "lint": "eslint .",
@@ -92,6 +92,7 @@
     "ts-jest": "^29.1.2",
     "tsup": "^8.0.2",
     "typedoc": "^0.28.5",
+    "typedoc-plugin-markdown": "4.6.4",
     "typescript": "5.8.3"
   },
   "keywords": [
