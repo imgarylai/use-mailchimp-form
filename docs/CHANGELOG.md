@@ -1,3 +1,9 @@
+## [3.1.4](https://github.com/imgarylai/use-mailchimp-form/compare/v3.1.3...v3.1.4) (2025-06-08)
+
+### Bug Fixes
+
+- **typedoc:** use api-docs for typedoc directory ([ef6af14](https://github.com/imgarylai/use-mailchimp-form/commit/ef6af14e7bbb74130f26295fbbb2599ddee835d1))
+
 ## [3.1.3](https://github.com/imgarylai/use-mailchimp-form/compare/v3.1.2...v3.1.3) (2025-04-13)
 
 ### Bug Fixes
