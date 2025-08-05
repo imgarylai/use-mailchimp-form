@@ -93,7 +93,7 @@
     "tsup": "^8.0.2",
     "typedoc": "^0.28.5",
     "typedoc-plugin-markdown": "4.8.0",
-    "typescript": "5.8.3"
+    "typescript": "5.9.2"
   },
   "keywords": [
     "hooks",
