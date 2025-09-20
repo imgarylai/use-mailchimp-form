@@ -92,7 +92,7 @@
     "ts-jest": "^29.1.2",
     "tsup": "^8.0.2",
     "typedoc": "^0.28.5",
-    "typedoc-plugin-markdown": "4.8.1",
+    "typedoc-plugin-markdown": "4.9.0",
     "typescript": "5.9.2"
   },
   "keywords": [
