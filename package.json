@@ -80,7 +80,7 @@
     "husky": "9.1.7",
     "jest": "^30.0.0",
     "jest-environment-jsdom": "^30.0.0",
-    "jsdom": "27.0.1",
+    "jsdom": "27.1.0",
     "lint-staged": "16.2.6",
     "prettier": "3.6.2",
     "prettier-package-json": "^2.4.11",
