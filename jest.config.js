@@ -1,4 +1,4 @@
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+/** @type {import('jest').Config} */
 export default {
   preset: "ts-jest",
   testEnvironment: "jsdom",
@@ -29,4 +29,7 @@ export default {
   transform: {
     "^.+\\.[tj]sx?$": ["ts-jest", { useESM: true }],
   },
+  transformIgnorePatterns: [
+    "node_modules/(?!(query-string|decode-uri-component|filter-obj|split-on-first)/)",
+  ],
 };

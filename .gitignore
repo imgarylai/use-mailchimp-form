@@ -218,6 +218,7 @@ Temporary Items
 .apdisk
 
 ### VisualStudioCode template
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -228,3 +229,5 @@ Temporary Items
 # Local History for Visual Studio Code
 .history/
 .idea
+
+mise.toml
