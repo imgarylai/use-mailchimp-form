@@ -1,5 +1,19 @@
 {
   "automerge": true,
   "automergeStrategy": "rebase",
-  "extends": ["config:recommended"]
+  "extends": ["config:base"],
+  "schedule": ["every weekend"],
+  "packageRules": [
+    {
+      "groupName": "node",
+      "matchPackageNames": ["node"],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "non-major dependencies",
+      "automerge": true,
+      "schedule": ["every weekend"]
+    }
+  ]
 }
