@@ -68,7 +68,7 @@
     "@types/jest": "30.0.0",
     "@types/jsdom": "27.0.0",
     "@types/node": "^24.0.0",
-    "@types/react": "19.2.6",
+    "@types/react": "19.2.7",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "cz-conventional-changelog": "3.3.0",
