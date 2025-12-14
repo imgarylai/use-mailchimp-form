@@ -1,3 +1,9 @@
+## [3.1.5](https://github.com/imgarylai/use-mailchimp-form/compare/v3.1.4...v3.1.5) (2025-12-14)
+
+### Bug Fixes
+
+- trigger patch release for dependency updates ([bffbef5](https://github.com/imgarylai/use-mailchimp-form/commit/bffbef5f2a5b88e47be2d949a34bce95564001cf))
+
 ## [3.1.4](https://github.com/imgarylai/use-mailchimp-form/compare/v3.1.3...v3.1.4) (2025-06-08)
 
 ### Bug Fixes
