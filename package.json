@@ -26,9 +26,9 @@
     "src"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "vite build",
     "clean": "rimraf dist coverage",
-    "dev": "tsup --watch",
+    "dev": "vite build --watch",
     "predocs": "rimraf api-docs",
     "docs": "typedoc",
     "docs:watch": "typedoc --watch",
@@ -90,10 +90,11 @@
     "semantic-release": "^25.0.0",
     "sort-package-json": "3.6.0",
     "ts-jest": "^29.1.2",
-    "tsup": "^8.0.2",
     "typedoc": "^0.28.5",
     "typedoc-plugin-markdown": "4.9.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.0.0"
   },
   "keywords": [
     "hooks",
