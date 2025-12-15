@@ -1,3 +1,9 @@
+# [3.2.0](https://github.com/imgarylai/use-mailchimp-form/compare/v3.1.5...v3.2.0) (2025-12-15)
+
+### Features
+
+- migrate from tsup to vite for build tooling ([c549bf6](https://github.com/imgarylai/use-mailchimp-form/commit/c549bf6afa11f1d68c61f9713c3b11ab1302e62b))
+
 ## [3.1.5](https://github.com/imgarylai/use-mailchimp-form/compare/v3.1.4...v3.1.5) (2025-12-14)
 
 ### Bug Fixes
