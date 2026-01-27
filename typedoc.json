@@ -7,6 +7,5 @@
   "includeVersion": true,
   "theme": "default",
   "name": "use-mailchimp-form",
-  "readme": "README.md",
-  "plugin": ["typedoc-plugin-markdown"]
+  "readme": "README.md"
 }
