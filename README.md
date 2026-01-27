@@ -46,7 +46,7 @@ yarn add use-mailchimp-form
 
 ### Basic Example
 
-```jsx
+```tsx
 import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
 
 export default function SubscribeForm() {
@@ -105,7 +105,7 @@ export default function SubscribeForm() {
 
 The `useFormFields` hook is optional. You can use your preferred form management solution (Formik, React Hook Form, etc.) with `useMailChimpForm`:
 
-```jsx
+```tsx
 import { useMailChimpForm } from "use-mailchimp-form";
 import { useForm } from "react-hook-form";
 
