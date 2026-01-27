@@ -231,3 +231,6 @@ Temporary Items
 .idea
 
 mise.toml
+
+# Generated documentation
+api-docs/

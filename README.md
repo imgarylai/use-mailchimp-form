@@ -12,7 +12,7 @@ A React hooks-based solution for integrating [MailChimp](https://mailchimp.com/)
 
 ## Requirements
 
-- Node.js >= 20.0.0
+- Node.js >= 22.0.0
 - npm >= 10.0.0
 - React >= 18.2.0
 
@@ -39,7 +39,7 @@ yarn add use-mailchimp-form
 3. Select `Embedded Form`
 4. In the generated code, locate the form's action URL. It will look like:
    ```
-   https://aaaaaaaaa.us20.list-manage.com/subscribe/post?u=xxxxxxxxxxxxxxxxxx&amp;id=yyyyyyyyyy
+   https://aaaaaaaaa.us20.list-manage.com/subscribe/post?u=xxxxxxxxxxxxxxxxxx&id=yyyyyyyyyy
    ```
 
 ## Usage
