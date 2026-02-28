@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "use-mailchimp-form",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "MailChimp Form implemented in React Hooks",
   "license": "MIT",
   "author": "Gary Lai <garylai1990@gmail.com>",
