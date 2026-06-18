@@ -18,6 +18,7 @@
     },
     {
       "description": "Security updates - immediate and auto-merge",
+      "matchDatasources": ["npm"],
       "isVulnerabilityAlert": true,
       "schedule": ["at any time"],
       "automerge": true,
