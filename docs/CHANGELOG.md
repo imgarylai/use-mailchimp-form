@@ -1,3 +1,9 @@
+## [3.2.2](https://github.com/imgarylai/use-mailchimp-form/compare/v3.2.1...v3.2.2) (2026-06-18)
+
+### Bug Fixes
+
+- resolve TypeScript and ESLint conflicts ([ae48abe](https://github.com/imgarylai/use-mailchimp-form/commit/ae48abe57402007272b6b7b11b572f99020fbd52))
+
 ## [3.2.1](https://github.com/imgarylai/use-mailchimp-form/compare/v3.2.0...v3.2.1) (2026-02-28)
 
 ### Bug Fixes
