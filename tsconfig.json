@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "rootDir": ".",
+    "types": ["jest"],
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
