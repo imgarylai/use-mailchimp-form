@@ -1,3 +1,9 @@
+## [3.2.3](https://github.com/imgarylai/use-mailchimp-form/compare/v3.2.2...v3.2.3) (2026-06-18)
+
+### Bug Fixes
+
+- resolve Renovate configuration error ([880e644](https://github.com/imgarylai/use-mailchimp-form/commit/880e644c80439bf2d6f1d5a3e6d34dc327291c8f))
+
 ## [3.2.2](https://github.com/imgarylai/use-mailchimp-form/compare/v3.2.1...v3.2.2) (2026-06-18)
 
 ### Bug Fixes
