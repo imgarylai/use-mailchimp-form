@@ -33,7 +33,7 @@
     "docs": "typedoc",
     "docs:watch": "typedoc --watch",
     "lint": "oxlint .",
-    "prepack": "npm run build",
+    "prepack": "pnpm run build",
     "prepare": "husky",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -97,7 +97,7 @@
   ],
   "engines": {
     "node": ">=22.0.0",
-    "npm": ">=11.18.0"
+    "pnpm": ">=10"
   },
   "publishConfig": {
     "access": "public"
@@ -127,5 +127,6 @@
     "package.json": [
       "prettier-package-json --write"
     ]
-  }
+  },
+  "packageManager": "pnpm@10.34.5"
 }

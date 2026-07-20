@@ -30,6 +30,8 @@ export default {
     "^.+\\.[tj]sx?$": ["ts-jest", { useESM: true }],
   },
   transformIgnorePatterns: [
-    "node_modules/(?!(query-string|decode-uri-component|filter-obj|split-on-first)/)",
+    // Transform these ESM deps. The optional `.pnpm/.../` segment makes the
+    // pattern match both npm's flat layout and pnpm's nested store layout.
+    "node_modules/(?!(\\.pnpm/.*/)?(query-string|decode-uri-component|filter-obj|split-on-first))",
   ],
 };

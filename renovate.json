@@ -3,13 +3,16 @@
   "extends": ["config:best-practices", "group:allNonMajor"],
   "dependencyDashboard": true,
   "schedule": ["every weekend"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
   "vulnerabilityAlerts": {
     "enabled": true,
     "schedule": ["at any time"]
   },
   "packageRules": [
     {
-      "matchPackageNames": ["node"],
+      "description": "Do not chase engines minimums or the pinned pnpm version",
+      "matchDepTypes": ["engines", "packageManager"],
       "enabled": false
     },
     {
