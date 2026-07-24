@@ -76,7 +76,7 @@
     "jsdom": "29.1.1",
     "lint-staged": "17.1.0",
     "oxlint": "1.74.0",
-    "prettier": "3.9.5",
+    "prettier": "3.9.6",
     "prettier-package-json": "2.8.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
