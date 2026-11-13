@@ -7,6 +7,8 @@ export default defineConfig({
   plugins: [
     dts({
       include: ["src/**/*"],
+      // Emit declarations at dist/ root to match package.json "types"
+      entryRoot: "src",
       exclude: ["**/*.test.*", "**/*.spec.*"],
     }),
   ],
