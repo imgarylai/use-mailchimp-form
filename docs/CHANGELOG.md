@@ -1,3 +1,9 @@
+## [3.2.4](https://github.com/imgarylai/use-mailchimp-form/compare/v3.2.3...v3.2.4) (2026-11-14)
+
+### Bug Fixes
+
+- **build:** emit type declarations at dist root ([f62018e](https://github.com/imgarylai/use-mailchimp-form/commit/f62018eb884f58ebf4e1b8b64f0e0571947a5df2)), closes [#861](https://github.com/imgarylai/use-mailchimp-form/issues/861)
+
 ## [3.2.3](https://github.com/imgarylai/use-mailchimp-form/compare/v3.2.2...v3.2.3) (2026-06-18)
 
 ### Bug Fixes
